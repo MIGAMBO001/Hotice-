@@ -1,17 +1,3 @@
-HOTICE
-Connect. Share. Keep going.
-HOTICE is an independent social and communication platform featuring messaging, groups, Status, calls, and Marketplace.
-Current stack
-React + TypeScript
-Vite
-Tailwind CSS
-Node/TypeScript backend
-Features
-Direct messaging
-Groups
-Status
-Voice/video calls
-Marketplace
-User accounts and recovery
-Development Instructions for installing dependencies, running the app locally, configuring environment variables, and building for production.
-Deployment Notes about the current deployment and any platform-specific configuration.
+# HOTICE Infrastructure
+
+Phase 0 infrastructure concerns: environment separation, deployment configuration, secrets, logging, monitoring, database connectivity, backups, and rollback readiness. Cloud-specific infrastructure will be introduced only when required by the deployment target.
