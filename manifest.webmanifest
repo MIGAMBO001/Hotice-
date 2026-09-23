@@ -1,1 +1,17 @@
-{"name":"HOTICE","short_name":"HOTICE","description":"Connect. Share. Keep going.","start_url":"./","display":"standalone","background_color":"#080b14","theme_color":"#080b14","icons":[{"src":"./resources/hotice-icon-mark.png","sizes":"192x192","type":"image/png","purpose":"any"},{"src":"./resources/hotice-icon-mark.png","sizes":"512x512","type":"image/png","purpose":"any"},{"src":"./resources/hotice-icon-mark.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}
+{
+  "name": "HOTICE",
+  "short_name": "HOTICE",
+  "description": "Connect. Share. Keep going.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080b14",
+  "theme_color": "#080b14",
+  "icons": [
+    {
+      "src": "./resources/hotice-selected-brand.jpg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
