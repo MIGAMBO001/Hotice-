@@ -1,3 +1,3 @@
-# HOTICE Infrastructure
+# HOTICE Mobile Foundation
 
-Phase 0 infrastructure concerns: environment separation, deployment configuration, secrets, logging, monitoring, database connectivity, backups, and rollback readiness. Cloud-specific infrastructure will be introduced only when required by the deployment target.
+The product mobile client is planned as Flutter/Dart. AppDeploy Phase 0 currently provides the deployable React web shell and backend runtime; this directory reserves the mobile boundary without pretending a Flutter runtime exists in the AppDeploy web deployment.
