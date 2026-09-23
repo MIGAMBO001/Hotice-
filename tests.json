@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Sign in and keep a long-lived session",
+    "sanity": true,
+    "viewport": "mobile",
+    "covers": ["sign in", "long-lived session", "persistent cookie", "GET /api/v1/auth/me", "explicit sign out"],
+    "description": "Verifies a valid account can sign in and remains authenticated until explicit sign out or revocation.",
+    "steps": ["Sign in", "Close the app/browser", "Return later and reopen HOTICE", "Sign out"],
+    "expected": "The existing session remains authenticated after inactivity and explicit sign out returns the user to the signed-out screen."
+  },
+  {
+    "name": "HOTICE navigation, profile and settings",
+    "viewport": "mobile",
+    "covers": ["five-section navigation", "Chats navigation", "Status navigation", "Calls navigation", "Marketplace navigation", "Profile navigation", "profile presentation", "vertical three-dot menu", "Settings entry"],
+    "description": "Verifies the primary HOTICE areas, Profile and the authenticated three-dot menu remain reachable.",
+    "steps": ["Sign in", "Observe Chats, Status, Calls, Marketplace and Profile", "Tap Profile", "Observe the profile hero", "Open the three-dot menu", "Tap Settings", "Observe Settings", "Return to Chats"],
+    "expected": "All five core areas remain available, Profile opens correctly, and the menu exposes Settings."
+  },
+  {
+    "name": "Marketplace seller and buyer workflow with media",
+    "viewport": "desktop",
+    "covers": ["seller agreement", "store persistence", "listing creation", "listing media upload", "20 MB media limit", "stock management", "saved listings", "save and unsave", "GET /api/v1/marketplace/listings/:id", "GET /api/v1/marketplace/listings/:id/reviews", "GET /api/v1/marketplace/listings/:id/media", "POST /api/v1/marketplace/listings/:id/media", "seller/store profile", "review presentation"],
+    "description": "Verifies seller creation and buyer listing flows, including listing media and stock state.",
+    "steps": ["Sign in as seller", "Open Marketplace", "Accept seller agreement", "Create store if needed", "Choose one image or video at or below 20 MB", "Publish a listing", "Open the listing and observe its media and seller/store details", "Update stock to 0", "Save the listing", "Open Saved", "Unsave the listing"],
+    "expected": "The listing persists with its media, zero stock displays as out of stock, seller/store details are visible, and save/unsave works."
+  },
+  {
+    "name": "Shared Marketplace card uses refreshable media",
+    "viewport": "desktop",
+    "covers": ["Marketplace share to chat", "rich Marketplace chat card", "Marketplace share to Status", "rich Marketplace Status card", "refreshable Marketplace media", "listing deep link", "ordinary text preservation"],
+    "description": "Verifies shared Marketplace cards store listing identity rather than an expiring signed media URL.",
+    "steps": ["Sign in", "Open a Marketplace listing with an image", "Share it to a chat", "Open the chat", "Observe the Marketplace card and current image", "Open the shared card", "Share the listing to Status", "Open Status", "Observe the Marketplace card and current image"],
+    "expected": "The listing appears as a rich card in chat and Status, current media is fetched from the listing endpoint, opening the card reaches listing detail, and ordinary text remains text."
+  },
+  {
+    "name": "Start and receive a 1:1 voice call",
+    "viewport": "desktop",
+    "covers": ["calls", "incoming invitation"],
+    "description": "Verifies a direct call invitation remains available alongside the Marketplace changes.",
+    "steps": ["Actor A starts a voice call", "Actor B observes the incoming invitation", "Actor B accepts or declines"],
+    "expected": "Actor B sees the call invitation with accept and decline controls."
+  }
+]
